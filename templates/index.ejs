@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StreamerJS</title>
-  </head>
-  <body>
-    <h1>StreamerJS</h1>
 
-    <section>
-      <h2>Scenes</h2>
-      Go to <a href="/scenes/">/scenes/</a> to open your scene pages and add
-      them to your OBS scene in a browser component.
-    </section>
-    <section>
-      <% if (control) { %>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StreamerJS</title>
+  <link href="/_resources/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="apptitle">
+    <h1>StreamerJS</h1>
+  </div>
+
+  <section class="scenes_section">
+    <h2>Scenes</h2>
+    Go to <a href="/scenes/">/scenes/</a> to open your scene pages and add
+    them to your OBS scene in a browser component.
+  </section>
+  <section class="control_section">
+    <% if (control) { %>
       <h2>Control</h2>
       Go to <a href="/control/">/control/</a> to open your control page. <% } %>
-    </section>
-  </body>
+  </section>
+</body>
+
 </html>
