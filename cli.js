@@ -125,7 +125,7 @@ Object.keys(networkInterfaces).forEach((interfaceName) => {
 // Server index linking to other parts of the server
 app.get("/", (req, res) => {
   app.engine("ejs", ejs.renderFile);
-  res.render("index", { control: enableControlPanel });
+  res.render("index", { control: enableControlPanel, ips, port: config.port });
 });
 
 // Assets in user's project

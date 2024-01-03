@@ -13,16 +13,39 @@
     <h1>StreamerJS</h1>
   </div>
 
-  <section class="scenes_section">
-    <h2>Scenes</h2>
-    Go to <a href="/scenes/">/scenes/</a> to open your scene pages and add
-    them to your OBS scene in a browser component.
-  </section>
-  <section class="control_section">
+  <main>
+
+    <section class="ips window">
+
+      <h2> Local/Remote </h2>
+
+      <ul>
+        <% ips.forEach(function(ip) { %>
+          <li>
+            <a href="http://<%=ip%>:<%=port%>/">http://<%=ip%>:<%=port%>/</a>
+          </li>
+          <% }) %>
+      </ul>
+    </section>
+
+    <section class="scenes button">
+      <h2>Scenes</h2>
+      <p>
+        Go to /scenes/ to open your scene pages and add
+        them to your OBS scene in a browser component.
+      </p>
+    </section>
+
     <% if (control) { %>
-      <h2>Control</h2>
-      Go to <a href="/control/">/control/</a> to open your control page. <% } %>
-  </section>
+      <section class="control button">
+
+        <p>
+        <h2>Control</h2>
+        Go to /control/ to open your control page.
+        </p>
+      </section>
+      <% } %>
+  </main>
 </body>
 
 </html>
